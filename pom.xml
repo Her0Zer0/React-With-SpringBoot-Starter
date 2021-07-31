@@ -12,7 +12,8 @@
     <artifactId>ReactBoot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ReactBoot</name>
-    <description>Demo project for Spring Boot</description>
+    <description>React + Spring Boot starter that runs on the same port!</description>
+    <packaging>jar</packaging>
     <properties>
         <java.version>11</java.version>
     </properties>
