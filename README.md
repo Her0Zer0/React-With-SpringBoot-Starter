@@ -79,3 +79,5 @@
   ```
   You should now be able to go to http://localhost:8080 and see your React + SpringBoot application at work, and that is it! Happy hacking! 
   
+  ![App on port 8080](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/app_on_8080.PNG)
+  
