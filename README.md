@@ -42,10 +42,39 @@
 
   ![App JS Example](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/appjs_example.PNG)
   
+  9. If you have followed the examples or used fileset avialable [here](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/tree/master) when you run **npm start** in your React app directory (where the package.json file is) and have started your SpringBoot app you should see something like this. In the below image I opened the console to confirm no errors where present. 
+
+  ![App Start](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/app_start.PNG)
   
   
+  # Building the app for Jar
   
+  1. One last thing to talk about is when we build a .jar to hand out. In the pom.xml file we have the below configurations. They allow us to pull the built React app and place it within the /target/classes/public folder so SpringBoot can grab it when it loads. 
+
+  ![Pom Example](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/pom_example.PNG)
   
+  2. Before building the .jar file navigate back to the React app root folder (where the package.json file is) and run **npm run build**. This creates the static files needed to be served for your React application. 
+  3. Now that we built the frontend of our app, we can use maven to build our .jar. Also, we need to make sure the pom has the correct packaging before moving forward. 
+    ![Packaging Example](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/packaging_example.PNG)
+    
+  4. To build the package you can use your IDE if it is capable or you can use maven in the command line. From your Project Root (where src, .mvn, and pom.xml live)
+  ```.sh
+  $ mvn clean package
+  ```
   
+  5. If you don't see any errors you should have a target folder now in the current directory. Within the target folder you should be able to look through the tree and find your public folder where your React app lives and also the .jar file. 
+
+  ![Jar Example](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/jar_example.PNG)
   
+  6. You can now pass this application without having to install anything on another computer other than using this .jar file and the jre. To run it use this command below: 
+  ```.sh
+  $ java -jar <jar file name here>
+  ```
+  
+  In this example it would be
+  ```.sh
+  $ java -jar ReactBoot-0.0.1-SNAPSHOT.jar
+  ```
+  
+  And that is it, happy hacking! 
   
