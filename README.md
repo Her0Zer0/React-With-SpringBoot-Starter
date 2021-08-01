@@ -7,7 +7,7 @@
   * Lombok
   * JPA
 
-  _Also including a ready to develop React app. After pulling down the fileset you should be able to both run **npm start** to start the node server for development, and after building for production **npm run build** create a .jar in SpringBoot that captures the built React application._
+  _Also including a ready to develop React app. After pulling down the fileset you should be able to both run **"npm start"** to start the node server for development, and after building for production **"npm run build"** create a .jar in SpringBoot that captures the built React application._
   
 ## 2. Create your own
   Prerequisites: Node and npm should be installed (https://nodejs.org/en/)
@@ -17,14 +17,14 @@
   $ npx create-react-app <your app name here>
   ```
   3. This will begin to pull all of the node modules and create the react app for your build. 
-      The file structure should look something like this. 
+      The file structure should look something like this. Notice in my example I used _"frontend"_ as my app name. 
       
       ![File Structure](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/file_structure.PNG)
-  4. Next, open a terminal window and navigate to the app directory and run. 
+  4. Next, open a terminal window and navigate to the app directory (where package.json lives) and run. 
   ```.sh
   $ npm start
   ```
-   This should bring the React app on localhost:3000, if you are able to bring up the standard React app logo, etc,... you have built it successfully.
+   This should bring the React app up on localhost:3000, if you are able to bring up the standard React app logo, etc,... you have built it successfully.
    
    5. Create a RestController in your SpringBoot application for React to communicate with when starting. Below is the example I have used [here](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/master/src/main/java/com/slyfoxdevelopment/reactboot/ReactBootApplication.java). 
 
@@ -53,7 +53,7 @@
 
   ![Pom Example](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/pom_example.PNG)
   
-  2. Before building the .jar file navigate back to the React app root folder (where the package.json file is) and run **npm run build**. This creates the static files needed to be served for your React application. 
+  2. Before building the .jar file navigate back to the React app root folder (where the package.json file is) and run **_npm run build_**. This creates the static files needed to be served for your React application. 
   3. Now that we built the frontend of our app, we can use maven to build our .jar. Also, we need to make sure the pom has the correct packaging before moving forward. 
     ![Packaging Example](https://github.com/Her0Zer0/React-With-SpringBoot-Starter/blob/main/packaging_example.PNG)
     
@@ -75,6 +75,5 @@
   ```.sh
   $ java -jar ReactBoot-0.0.1-SNAPSHOT.jar
   ```
-  
-  And that is it, happy hacking! 
+  You should now be able to go to http://localhost:8080 and see your React + SpringBoot application at work, and that is it! Happy hacking! 
   
